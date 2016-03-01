@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBros", "BigBros\BigBros\BigBros.csproj", "{D7CA7582-EE33-442A-9B49-A8FD0B381344}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "BigBrosContent", "BigBros\BigBrosContent\BigBrosContent.contentproj", "{A558E29D-20C4-420D-B95B-AF52A2ECC95D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7CA7582-EE33-442A-9B49-A8FD0B381344}.Debug|x86.ActiveCfg = Debug|x86
+		{D7CA7582-EE33-442A-9B49-A8FD0B381344}.Debug|x86.Build.0 = Debug|x86
+		{D7CA7582-EE33-442A-9B49-A8FD0B381344}.Release|x86.ActiveCfg = Release|x86
+		{D7CA7582-EE33-442A-9B49-A8FD0B381344}.Release|x86.Build.0 = Release|x86
+		{A558E29D-20C4-420D-B95B-AF52A2ECC95D}.Debug|x86.ActiveCfg = Debug|x86
+		{A558E29D-20C4-420D-B95B-AF52A2ECC95D}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
