@@ -13,12 +13,13 @@ namespace BigBros
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        GraphicsDeviceManager m_Graphics;
+        SpriteBatch m_SpriteBatch;
+        ScreenManager m_ScreenManager;
         
         public Game1()
         {
-            graphics = new GraphicsDeviceManager(this);
+            m_Graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
 
@@ -30,7 +31,7 @@ namespace BigBros
 
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            m_SpriteBatch = new SpriteBatch(GraphicsDevice);
 
         }
 
@@ -50,8 +51,8 @@ namespace BigBros
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            spriteBatch.Begin();
-            spriteBatch.End();
+            m_SpriteBatch.Begin();
+            m_SpriteBatch.End();
 
             base.Draw(gameTime);
         }
