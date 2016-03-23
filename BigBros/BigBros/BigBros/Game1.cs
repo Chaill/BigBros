@@ -19,6 +19,8 @@ namespace BigBros
         
         public Game1()
         {
+            IsMouseVisible = true;
+            
             m_Graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
