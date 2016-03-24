@@ -14,7 +14,6 @@ namespace BigBros
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager m_Graphics;
-        SpriteBatch m_SpriteBatch;
         ScreenManager m_ScreenManager;
         
         public Game1()
@@ -22,6 +21,9 @@ namespace BigBros
             IsMouseVisible = true;
             
             m_Graphics = new GraphicsDeviceManager(this);
+            m_Graphics.PreferredBackBufferWidth = 1000;
+            m_Graphics.PreferredBackBufferHeight = 700;
+
             Content.RootDirectory = "Content";
         }
 
@@ -33,8 +35,9 @@ namespace BigBros
 
         protected override void LoadContent()
         {
-            m_SpriteBatch = new SpriteBatch(GraphicsDevice);
+            m_ScreenManager = new ScreenManager();
 
+            m_ScreenManager.Init(GraphicsDevice, Content);
         }
 
         protected override void UnloadContent()
@@ -43,8 +46,7 @@ namespace BigBros
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
+            m_ScreenManager.Update(this);
 
             base.Update(gameTime);
         }
@@ -53,8 +55,7 @@ namespace BigBros
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            m_SpriteBatch.Begin();
-            m_SpriteBatch.End();
+            m_ScreenManager.Draw();
 
             base.Draw(gameTime);
         }
